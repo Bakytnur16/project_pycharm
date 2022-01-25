@@ -25,3 +25,17 @@ for x in range(len(grid) - 3):
     for y in range(len(grid[x]) + 2):
         print(grid[y][x],end=' ')
     print(grid[8][x])
+ 
+
+# 计算文本的每个字符的出现次数
+from sys import argv
+script, filename = argv
+def countTxt(message):
+    count = {}
+    for character in message:
+        count.setdefault(character, 0)
+        count[character] = count[character] + 1
+    print(count)
+
+a = open(filename)
+countTxt(a.read())
